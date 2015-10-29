@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<p>
+
+</p>
+
+<div class="row">
+    <div class="jumbotron">
+        <h1>London bridge media</h1>
+        <p class="lead">Welcome to the interview and good Luck!</p>
+    </div>
+    <hr />
+</div>
+
+<div class="row">
+    <h2>Technical Interview </h2>
+
+    <div class="well">
+        <p>
+            You have taken over an incomplete project from another developer. The goal is to create a website where a user can enter details of people.
+        </p>
+
+        <p>
+            The project has been setup in MVC and uses bootstrap for styling. There is already a database and to keep things simple Entity Framework with code first has been implemented. The context called DatabaseContext is in the context folder.
+        </p>
+
+        <p>
+            There are 2 web APIs that have been created that may be used from the client side to populate drop down lists. These are in the Controllers\API folder.
+        </p>
+
+        <p>
+            For client side development JQuery is currently installed but you may decide to use something else.
+        </p>
+
+        <p>
+            The test project LMBTech.Tests contains the tests for the solution. Try to maintain the same development standards that you normally would.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Tasks</h2>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task 1</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                In the layout page replace Top Candidate with your name. Also put your name in the footer for the copyright.
+            </p>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task 2</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                The country and region controller tests are currently failing. Complete the API and the tests to get these to pass.
+            </p>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task 3</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Create a @Html.ActionLink("create person", "create", "people") screen, to allow a user to create a new person. This screen must have fields for Name, Surname, Age, Country and Region. Country and Region should be dropdownlists, populated with data from the database.
+            </p>
+            <p>
+                The @Html.ActionLink("people", "Index", "People") screen must display a list people. 
+            </p>
+            @*<p>
+                <img src="~/Images/Create Screen example.PNG" alt="create image screen" />
+            </p>*@
+            <p>
+                You will need to design your person model. Code first will alter the database table to match your structure. Use data annotations to produce validations if you think the form will need any. Write tests for your form if you think it needs any.
+            </p>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task 4</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Whenever the country dropdown changes the regions should update to only display regions for the selected country.
+            </p>
+        </div>
+    </div>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task 5</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                You have a business requirement that users must be able to find people by either name and surname. Create a search field to filter the results of the @Html.ActionLink("people", "Index", "People") page.
+            </p>
+        </div>
+    </div>
+</div>

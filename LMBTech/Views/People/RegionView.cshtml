@@ -1,0 +1,6 @@
+﻿@model LMBTech.ViewModel.RegionViewModel
+@{
+    Layout = null;
+}
+@Html.DropDownListFor(p => p.SelectedRegionId, Model.RegionIEnum, "Select a Region", new { @id = "Region-DropDownID", @class = "Region-DropDownCls" })
+

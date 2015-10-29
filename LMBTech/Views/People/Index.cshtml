@@ -1,0 +1,69 @@
+﻿@using LMBTech.Models
+@model IEnumerable<Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of people</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm())
+    {
+    <p>
+        Name: <br />
+        @Html.TextBox("name") <br />
+    </p>
+
+    <p>
+        Surname: <br />
+        @Html.TextBox("surname") 
+        <input type="submit" value="Filter" />
+    </p>
+    }
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Country
+        </th>
+        <th>
+            Region
+        </th>
+    </tr>
+
+    @foreach (Person person in Model)
+    {        
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => person.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Region.Country.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.Region.Name)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LMBTech</name>
+    </assembly>
+    <members>
+        <member name="T:LMBTech.Contexts.DatabaseContext">
+            <summary>The database context.</summary>
+        </member>
+        <member name="T:LMBTech.Contexts.IDatabaseContext">
+            <summary>The DatabaseContext interface.</summary>
+        </member>
+        <member name="M:LMBTech.Contexts.IDatabaseContext.Entry(System.Object)">
+            <summary>The entry.</summary>
+            <param name="entity">The entity.</param>
+            <returns>The <see cref="T:System.Data.Entity.Infrastructure.DbEntityEntry"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Contexts.IDatabaseContext.Entry``1(``0)">
+            <summary>The entry.</summary>
+            <param name="entity">The entity.</param>
+            <typeparam name="TEntity"></typeparam>
+            <returns>The <see cref="T:System.Data.Entity.Infrastructure.DbEntityEntry"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Contexts.IDatabaseContext.SaveChanges">
+            <summary>The save changes.</summary>
+            <returns>The <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Contexts.IDatabaseContext.SaveChangesAsync">
+            <summary>The save changes async.</summary>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="P:LMBTech.Contexts.IDatabaseContext.Countries">
+            <summary>Gets or sets the countries.</summary>
+        </member>
+        <member name="P:LMBTech.Contexts.IDatabaseContext.People">
+            <summary>Gets or sets the people.</summary>
+        </member>
+        <member name="P:LMBTech.Contexts.IDatabaseContext.Regions">
+            <summary>Gets or sets the regions.</summary>
+        </member>
+        <member name="M:LMBTech.Contexts.DatabaseContext.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Contexts.DatabaseContext"/> class.</summary>
+        </member>
+        <member name="M:LMBTech.Contexts.DatabaseContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>The on model creating.</summary>
+            <param name="modelBuilder">The model builder.</param>
+        </member>
+        <member name="P:LMBTech.Contexts.DatabaseContext.Countries">
+            <summary>Gets or sets the countries.</summary>
+        </member>
+        <member name="P:LMBTech.Contexts.DatabaseContext.People">
+            <summary>Gets or sets the people.</summary>
+        </member>
+        <member name="P:LMBTech.Contexts.DatabaseContext.Regions">
+            <summary>Gets or sets the regions.</summary>
+        </member>
+        <member name="T:LMBTech.Contexts.DatabaseContextInitializer">
+            <summary>The database context initializer.</summary>
+        </member>
+        <member name="M:LMBTech.Contexts.DatabaseContextInitializer.Seed(LMBTech.Contexts.DatabaseContext)">
+            <summary>The seed.</summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:LMBTech.Contexts.DatabaseContextInitializer.CreateCountries(LMBTech.Contexts.DatabaseContext)">
+            <summary>The create countries.</summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:LMBTech.Controllers.API.RegionsController">
+            <summary>The regions controller.</summary>
+        </member>
+        <member name="F:LMBTech.Controllers.API.RegionsController.db">
+            <summary>The db.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.API.RegionsController.#ctor(LMBTech.Contexts.IDatabaseContext)">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.API.RegionsController"/> class.</summary>
+            <param name="db">The db.</param>
+        </member>
+        <member name="M:LMBTech.Controllers.API.RegionsController.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.API.RegionsController"/> class.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.API.RegionsController.GetRegionsByCountryId(System.Int32)">
+            <summary>The get regions.</summary>
+            <param name="countryId">The country Id.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Controllers.API.RegionsController.Dispose(System.Boolean)">
+            <summary>The dispose.</summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="T:LMBTech.Controllers.MVC.PeopleController">
+            <summary>The people controller.</summary>
+        </member>
+        <member name="F:LMBTech.Controllers.MVC.PeopleController.db">
+            <summary>The db.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.#ctor(LMBTech.Contexts.IDatabaseContext)">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.MVC.PeopleController"/> class.</summary>
+            <param name="db">The db.</param>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.MVC.PeopleController"/> class.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.Create">
+            <summary>The create.</summary>
+            <returns>The <see cref="T:System.Web.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.Create(LMBTech.Models.Person,System.Web.Mvc.FormCollection)">
+            <summary>The create.</summary>
+            <param name="person">The person.</param>
+            <returns>The <see cref="T:System.Web.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.Index(System.String,System.String)">
+            <summary>The index.</summary>
+            <returns>The <see cref="T:System.Web.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.PeopleController.Dispose(System.Boolean)">
+            <summary>The dispose.</summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="T:LMBTech.Models.Person">
+            <summary>The person.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Id">
+            <summary>Gets or sets the id.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Name">
+            <summary>Gets or sets the name.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Surname">
+            <summary>Gets or sets the Surname.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Age">
+            <summary>Gets or sets the Age.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Country">
+            <summary>Gets or sets the country.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.Region">
+            <summary>Gets or sets the region.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Person.RegionId">
+            <summary>Gets or sets the region id.</summary>
+        </member>
+        <member name="T:LMBTech.Controllers.API.CountryController">
+            <summary>The country controller.</summary>
+        </member>
+        <member name="F:LMBTech.Controllers.API.CountryController.db">
+            <summary>The db.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.API.CountryController.GetAllCountries">
+            <summary>The get.</summary>
+            <returns>The <see cref="T:System.Collections.Generic.List`1"/>.</returns>
+        </member>
+        <member name="M:LMBTech.Controllers.API.CountryController.Dispose(System.Boolean)">
+            <summary>The dispose.</summary>
+            <param name="disposing">The disposing.</param>
+        </member>
+        <member name="M:LMBTech.Controllers.API.CountryController.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.API.CountryController"/> class.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.API.CountryController.#ctor(LMBTech.Contexts.IDatabaseContext)">
+            <summary>Initializes a new instance of the <see cref="T:LMBTech.Controllers.API.CountryController"/> class.</summary>
+            <param name="db">The db.</param>
+        </member>
+        <member name="T:LMBTech.Controllers.MVC.HomeController">
+            <summary>The home controller.</summary>
+        </member>
+        <member name="M:LMBTech.Controllers.MVC.HomeController.Index">
+            <summary>The index.</summary>
+            <returns>The <see cref="T:System.Web.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="T:LMBTech.Models.Country">
+            <summary>The country.</summary>
+        </member>
+        <member name="M:LMBTech.Models.Country.ToString">
+            <summary>The to string.</summary>
+            <returns>The <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="P:LMBTech.Models.Country.Id">
+            <summary>Gets or sets the id.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Country.Name">
+            <summary>Gets or sets the name.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Country.Regions">
+            <summary>Gets or sets the regions.</summary>
+        </member>
+        <member name="T:LMBTech.Models.Region">
+            <summary>The region.</summary>
+        </member>
+        <member name="M:LMBTech.Models.Region.ToString">
+            <summary>The to string.</summary>
+            <returns>The <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="P:LMBTech.Models.Region.Country">
+            <summary>Gets or sets the country.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Region.CountryId">
+            <summary>Gets or sets the country id.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Region.Id">
+            <summary>Gets or sets the id.</summary>
+        </member>
+        <member name="P:LMBTech.Models.Region.Name">
+            <summary>Gets or sets the name.</summary>
+        </member>
+    </members>
+</doc>

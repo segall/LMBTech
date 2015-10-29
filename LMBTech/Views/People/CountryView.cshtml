@@ -1,0 +1,7 @@
+﻿@model  LMBTech.ViewModel.CountryViewModel
+
+@{
+    Layout = null;
+}
+@Html.DropDownListFor(p => p.SelectedCountryID, Model.CountryIEnum, "Select a Country", new { @id = "Country-DropdownID", @class = "Country-DropdownCls" })
+
